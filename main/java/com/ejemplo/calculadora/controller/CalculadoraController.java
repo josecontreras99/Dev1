@@ -23,7 +23,7 @@ public class CalculadoraController {
 
     @GetMapping("/dividir")
     public double dividir(@RequestParam double a, @RequestParam double b) {
-        if (b == 0) throw new IllegalArgumentException("No se puede dividir por cero ");
+        if (b == 0) throw new IllegalArgumentException("No se puede dividir entre cero ");
         return a / b;
     }
 }
