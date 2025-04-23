@@ -27,9 +27,7 @@ public class CalculadoraUITest {
         }
         
         // Inicializar el driver con las opciones
-        System.out.println("mostrando driver");
         driver = new ChromeDriver(options);
-        
         
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         
