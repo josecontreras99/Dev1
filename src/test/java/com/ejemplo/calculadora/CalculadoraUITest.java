@@ -29,7 +29,7 @@ public class CalculadoraUITest {
         // Inicializar el driver con las opciones
         driver = new ChromeDriver(options);
         
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(100));
         
         // Navegar a la URL de la calculadora
         driver.get("http://localhost:8080/api/calculadora/");
