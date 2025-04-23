@@ -22,9 +22,9 @@ public class CalculadoraUITest {
         ChromeOptions options = new ChromeOptions();
         
         // Si estamos ejecutando en CI, habilitar el modo sin cabeza
-        if (System.getenv("CI") != null) {
-            options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--user-data-dir=/tmp/chrome-user-data");
-        }
+        // if (System.getenv("CI") != null) {
+        //     options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--user-data-dir=/tmp/chrome-user-data");
+        // }
         
         // Inicializar el driver con las opciones
         driver = new ChromeDriver(options);
