@@ -83,6 +83,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
+                    <release>8</release>
                     <archive>
                         <manifest>
                             <mainClass>com.ejemplo.calculadora.CalculadoraApiApplication</mainClass>
