@@ -38,8 +38,8 @@
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v134</artifactId>
-            <version>4.20.0</version>
+            <artifactId>selenium-devtools-v135</artifactId>
+            <version>4.31.0</version>
         </dependency>
         <!-- <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
