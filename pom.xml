@@ -30,17 +30,17 @@
             <version>${spring.boot.version}</version>
         </dependency>
         <!-- Selenium WebDriver -->
-        <!-- <dependency>
+        <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
             <version>4.20.0</version>
-        </dependency> -->
+        </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-devtools-v135</artifactId>
             <version>4.31.0</version>
-        </dependency>
+        </dependency> -->
         <!-- <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
