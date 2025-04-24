@@ -29,7 +29,7 @@ public class CalculadoraUITest {
         // Inicializar el driver con las opciones
         driver = new ChromeDriver(options);
         
-        wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         
         // Navegar a la URL de la calculadora
         driver.get("http://localhost:8080/api/calculadora/");
@@ -78,6 +78,25 @@ public class CalculadoraUITest {
         // Esperar y verificar el resultado
         WebElement resultado = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("h2")));
         Assertions.assertTrue(resultado.getText().contains("Resultado: 2"));
+    }
+
+    @Test
+    public void testMultiplicar() {
+        // Localizar los elementos del formulario
+        WebElement num1Input = driver.findElement(By.name("num1"));
+        WebElement num2Input = driver.findElement(By.name("num2"));
+        WebElement operacion = driver.findElement(By.name("operacion"));
+        WebElement boton = driver.findElement(By.cssSelector("button[type='submit']"));
+
+        // Ingresar los valores
+        num1Input.sendKeys("5");
+        num2Input.sendKeys("3");
+        operacion.sendKeys("Multiplicar");
+        boton.click();
+
+        // Esperar y verificar el resultado
+        WebElement resultado = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("h2")));
+        Assertions.assertTrue(resultado.getText().contains("Resultado: 15"));
     }
 }
 
