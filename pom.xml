@@ -1,8 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/3.9.9"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/3.9.9 
+                             http://maven.apache.org/xsd/maven-3.9.9.xsd">
+    <modelVersion>3.9.9</modelVersion>
 
     <groupId>com.ejemplo</groupId>
     <artifactId>calculadora-api</artifactId>
@@ -13,7 +13,7 @@
     <description>API REST simple sin base de datos</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>17.0.12</java.version>
         <spring.boot.version>3.2.4</spring.boot.version> 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.java.binaries>${project.build.dir}/target</sonar.java.binaries>
@@ -42,6 +42,12 @@
             <artifactId>selenium-devtools-v135</artifactId>
             <version>4.31.0</version>
         </dependency>
+
+         <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.31.0</version>
+        </dependency>
         <!-- <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -53,19 +59,20 @@
             <version>4.0.0-rc-1</version>
         </dependency> -->
 
-	<!-- JUnit 5 para pruebas -->
-	<dependency>
-    		<groupId>org.junit.jupiter</groupId>
-    		<artifactId>junit-jupiter</artifactId>
-    		<version>5.10.0</version>
-    		<scope>test</scope>
-	</dependency>
+        <!-- JUnit 5 para pruebas -->
+        <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>5.10.0</version>
+                <scope>test</scope>
+        </dependency>
 
-	<dependency>
-    		<groupId>io.github.bonigarcia</groupId>
-    		<artifactId>webdrivermanager</artifactId>
-    		<version>5.8.0</version>
-	</dependency>
+        <dependency>
+                <groupId>io.github.bonigarcia</groupId>
+                <artifactId>webdrivermanager</artifactId>
+                <version>5.8.0</version>
+        </dependency>
+    
     </dependencies>
 
     <build>
