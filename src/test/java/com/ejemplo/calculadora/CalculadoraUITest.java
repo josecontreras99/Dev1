@@ -14,12 +14,15 @@ public class CalculadoraUITest {
     private WebDriver driver;
     private WebDriverWait wait;
 
+    ChromeOptions options = new ChromeOptions();
+
     @BeforeEach
     public void setUp() {
         // Configurar el driver de Chrome y las opciones
         WebDriverManager.chromedriver().setup();
         
         ChromeOptions options = new ChromeOptions();
+        options.setBrowserVersion("135.0.7049.95");
         
         // Si estamos ejecutando en CI, habilitar el modo sin cabeza
         if (System.getenv("CI") != null) {

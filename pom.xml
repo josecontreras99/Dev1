@@ -15,8 +15,6 @@
     <properties>
         <java.version>17.0.12</java.version>
         <spring.boot.version>3.2.4</spring.boot.version> 
-        <maven.compiler.source>11</maven.compiler.source><!-- nuevos-->
-        <maven.compiler.target>11</maven.compiler.target><!-- nuevos-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.java.binaries>${project.build.dir}/target</sonar.java.binaries>
     </properties>
