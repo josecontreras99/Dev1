@@ -23,7 +23,11 @@ public class CalculadoraUITest {
         
         // Si estamos ejecutando en CI, habilitar el modo sin cabeza
         if (System.getenv("CI") != null) {
-            options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--user-data-dir=/tmp/chrome-user-data");
+            options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--user-data-dir=/tmp/chrome-user-data");
         }
         
         // Inicializar el driver con las opciones
@@ -32,6 +36,7 @@ public class CalculadoraUITest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         
         // Navegar a la URL de la calculadora
+        System.out.println("Intentando abrir: http://localhost:8080/api/calculadora/");
         driver.get("http://localhost:8080/api/calculadora/");
     }
 
